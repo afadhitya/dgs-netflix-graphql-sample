@@ -1,0 +1,21 @@
+type Query {
+    shows(titleFilter: String): [Show]
+    actors(nameFilter: String): [Actor]
+}
+
+type Show {
+    title: String,
+    releaseYear: Int,
+    actors: [Actor],
+    directors: [Director]
+}
+
+type Actor {
+    name: String
+}
+
+type Director {
+    name: String,
+    directorId: String
+    showId: String
+}
