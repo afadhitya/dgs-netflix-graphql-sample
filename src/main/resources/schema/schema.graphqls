@@ -3,6 +3,14 @@ type Query {
     actors(nameFilter: String): [Actor]
 }
 
+type Mutation {
+    addRating(title: String, stars: Int): Rating
+}
+
+type Rating {
+    avgStars: Float
+}
+
 type Show {
     title: String,
     releaseYear: Int,
